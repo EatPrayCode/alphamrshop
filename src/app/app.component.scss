@@ -105,11 +105,11 @@ a {
 
 .navFooterStyles {
     align-items: center;
-    background: #391c59;
+    background: orange;
     box-sizing: border-box;
     color: #fff;
     display: flex;
-    padding: 24px 40px;
+    padding: 20px 20px;
     margin: 0;
     width: 100%;
     height: 72px;
@@ -138,13 +138,12 @@ a {
 
 @media only screen and (max-width:600px) {
     .navFooterStyles {
-        padding: 0;
-        margin-bottom: 50px;
-        background-color: transparent;
+        padding: 15px;
+        margin-bottom: 0px;
         height: auto;
     }
     .navFooterStyles__wrapper {
-        padding: 27px 16px;
+        padding: 50px 10px;
         display: block;
     }
 }
@@ -281,7 +280,7 @@ a {
 }
 
 .navHeaderStyles {
-    background: #391c59;
+    background: orange;
     box-shadow: 0 -2px 30px rgba(0, 0, 0, .2);
     box-sizing: border-box;
     color: #fff;
@@ -405,7 +404,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background-color: transparent;
+    // background-color: transparent;
 }
 
 @media only screen and (max-width:600px) {
@@ -441,7 +440,7 @@ a {
         display: flex;
         position: fixed;
         bottom: 0;
-        background: #391c59;
+        background: orange;
         left: 0;
         width: 100%;
     }
@@ -615,8 +614,9 @@ a {
     color: #fff;
     font-weight: 500;
     font-size: 20px;
+    padding: 20px;
     line-height: 27px;
-    margin-top: 6px;
+    margin-top: 15px;
     width: 95%;
 }
 
@@ -637,13 +637,13 @@ a {
 }
 
 main {
-    margin-top: 72px;
+    margin-top: 0px;
 }
 
 @media only screen and (max-width:600px) {
     main {
-        margin-top: 56px;
-        padding-bottom: 24px;
+        margin-top: 50px;
+        padding-bottom: 0px;
     }
 }
 
@@ -652,7 +652,7 @@ main {
     font-family: UniNeue, Arial, -apple-system, Roboto, sans-serif, serif;
     margin: 0 auto;
     padding: 0;
-    background: #220d40!important;
+    background: orange !important;
 }
 
 .index-module--container--20-MV,
@@ -827,7 +827,7 @@ main {
 
 .index-module--container--20-MV .index-module--homeComponents__transactiontestimony--2wqN- {
     align-items: center;
-    background: #2c1942;
+    background: orange;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -1284,7 +1284,7 @@ main {
     width: 500px;
     height: 80px;
     margin-top: 36px;
-    background-color: #2c1942;
+    background-color: orange;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -1397,7 +1397,7 @@ main {
 
 .index-module--container--20-MV .index-module--homeComponents__whypulse--3OdgB {
     align-items: center;
-    background-color: #2c1942;
+    background-color: orange;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -1556,4 +1556,14 @@ main {
     background-image: url(https://www.phonepe.com/pulsestatic/pulse/static/6e072e1d3d8b927b51ab2e2cca59a680/d4767/india-hp-image.png);
     background-image: url(https://www.phonepe.com/pulsestatic/pulse/static/6e072e1d3d8b927b51ab2e2cca59a680/7660a/india-hp-image.png);
     opacity: 0;
+}
+
+@media only screen and (min-width: 601px) {
+    .navHeaderStyles .navLinks__item a.activeHeader:before {
+        bottom: 0;
+        top: auto;
+        background-color: #fff;
+        border-radius: 10px 10px 0 0;
+        height: 6px;
+    }
 }
