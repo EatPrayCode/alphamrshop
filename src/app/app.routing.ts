@@ -21,7 +21,9 @@ export const routes: Routes = [
             // { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
-            { path: 'investment-packs', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) }
+            { path: 'investment-packs', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
+            // { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
+
         ]
     },
 ];

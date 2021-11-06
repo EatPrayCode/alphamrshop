@@ -18,8 +18,6 @@ import { Category, Product } from './mock-data/app.models';
 import { mockPackProduct1 } from './mock-data/mockJsonPacks';
 import { AppResolver } from './pages/services/app.resolver';
 import { StateService } from './pages/services/state.service';
-import { AlertDialogComponent } from './shared/alert-dialog/alert-dialog.component';
-import { ConfirmDialogModel, ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 import { packsDataSampleDoctor } from './mock-data/constants';
 import { tap } from 'rxjs/operators';
 
@@ -519,22 +517,22 @@ export class AppService {
     this.snackBar.open(message, '×', { panelClass: [status], verticalPosition: 'top', duration: 3000 });
   }
 
-  public openConfirmDialog(title: string, message: string) {
-    const dialogData = new ConfirmDialogModel(title, message);
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      maxWidth: "400px",
-      data: dialogData
-    });
-    return dialogRef;
-  }
+  // public openConfirmDialog(title: string, message: string) {
+  //   const dialogData = new ConfirmDialogModel(title, message);
+  //   const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+  //     maxWidth: "400px",
+  //     data: dialogData
+  //   });
+  //   return dialogRef;
+  // }
 
-  public openAlertDialog(message: string) {
-    const dialogRef = this.dialog.open(AlertDialogComponent, {
-      maxWidth: "400px",
-      data: message
-    });
-    return dialogRef;
-  }
+  // public openAlertDialog(message: string) {
+  //   const dialogRef = this.dialog.open(AlertDialogComponent, {
+  //     maxWidth: "400px",
+  //     data: message
+  //   });
+  //   return dialogRef;
+  // }
 
   public getTranslateValue(key: string, param: string = '') {
     let value = null;
