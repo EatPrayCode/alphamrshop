@@ -7,20 +7,20 @@ import { BlankComponent } from './layouts/blank/blank.component';
 export const routes: Routes = [
     {
         path: '',
-        component: BlankComponent,
+        component: PagesComponent,
         // component: KitchensinkComponent,
         children: [
-            { path: '', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
+            { path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
         ]
     },
     {
         path: '',
-        component: BlankComponent,
+        component: PagesComponent,
         // component: KitchensinkComponent,
         children: [
             // { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+            { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
-            { path: 'payment-packs', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
             { path: 'investment-packs', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) }
         ]
     },
