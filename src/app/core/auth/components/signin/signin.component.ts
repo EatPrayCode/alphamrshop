@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { StateService } from 'src/app/pages/services/state.service';
+import { StateService } from 'src/app/services/state.service';
 export type loginAction = 'register' | 'signIn' | 'forgotPassword' | 'changePassword' | 'changeEmail' | 'delete' | 'signOut';
 
 @Component({

@@ -7,7 +7,7 @@ import { switchMap, take, tap } from 'rxjs/operators';
 
 import { of } from 'rxjs';
 import { AuthService } from '../services/auth.service';
-import { StateService } from 'src/app/pages/services/state.service';
+import { StateService } from 'src/app/services/state.service';
 
 @Injectable({
   providedIn: 'root'

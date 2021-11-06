@@ -16,8 +16,8 @@ import { AuthService } from './core/auth/services/auth.service';
 import { AuthGuard } from './core/auth/guards/auth.guard';
 import { Category, Product } from './mock-data/app.models';
 import { mockPackProduct1 } from './mock-data/mockJsonPacks';
-import { AppResolver } from './pages/services/app.resolver';
-import { StateService } from './pages/services/state.service';
+import { AppResolver } from './services/app.resolver';
+import { StateService } from './services/state.service';
 import { packsDataSampleDoctor } from './mock-data/constants';
 import { tap } from 'rxjs/operators';
 

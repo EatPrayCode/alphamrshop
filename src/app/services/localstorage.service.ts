@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { of } from "rxjs";
-import { appSettingsState } from "../../mock-data/app.models";
+import { appSettingsState } from "../mock-data/app.models";
 
 @Injectable({
     providedIn: 'root'
