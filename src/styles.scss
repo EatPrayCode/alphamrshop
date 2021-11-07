@@ -4,15 +4,10 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 *,
-body,
-html {
+html,
+body {
     margin: 0;
     padding: 0;
-}
-
-html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
 }
 
 a,
