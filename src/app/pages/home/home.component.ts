@@ -9,4 +9,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() { }
 
+  rightList: any = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},];
+
 }
