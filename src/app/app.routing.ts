@@ -7,7 +7,7 @@ import { BlankComponent } from './layouts/blank/blank.component';
 export const routes: Routes = [
     {
         path: '',
-        component: PagesComponent,
+        component: BlankComponent,
         // component: KitchensinkComponent,
         children: [
             { path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
@@ -19,7 +19,8 @@ export const routes: Routes = [
         // component: KitchensinkComponent,
         children: [
             { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
-            { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) }
+            { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
+            { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) }
 
         ]
     },
