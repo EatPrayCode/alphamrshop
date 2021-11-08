@@ -1,52 +1,47 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { mockMonthlyHomeEssentialsProduct2 } from '../../../../../../mock-data/mockJsonPacks';
+import { ViewEditPackComponent } from '../view-edit-pack/view-edit-pack.component';
+import { MatDialog } from '@angular/material/dialog';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
-@Component({
-  selector: 'app-customise-pack',
-  templateUrl: './customise-pack.component.html',
-  styleUrls: ['./customise-pack.component.scss']
-})
-export class CustomisePackComponent implements OnChanges {
+import { dataProfiles } from 'src/app/mock-data/constants';
 
-  @Input() inputData: any = {};
+@Component({
+  selector: 'app-customise-items-table',
+  templateUrl: './customise-items-table.component.html',
+  styleUrls: ['./customise-items-table.component.scss'],
+  encapsulation: ViewEncapsulation.None
+})
+export class CustomiseItemsTableComponent implements OnChanges {
+
+  @Input() inputData: any = [];
+
   @Output() packChange = new EventEmitter();
+
   form: FormGroup = new FormGroup({});
   packLoaded: any = false;
-
-  tiles: any[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
+  rightList: any = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {},];
 
   ngOnChanges(changeRecord: SimpleChanges) {
     const record = changeRecord.inputData;
-    const inputData = record.currentValue || '';
-    if (this.inputData && this.inputData.packId ) {
+    const inputData = mockMonthlyHomeEssentialsProduct2;//record.currentValue || '';
+    if (this.inputData) {
+      console.log(this.inputData);
+      this.initialisePage(inputData);
       this.inputData = inputData;
       this.packLoaded = true;
-      this.initialisePage(inputData);
     }
   }
 
-  doSomething(event: any) {
-
-  }
-
   initialisePage(inputData: any) {
-    this.initPackSize(inputData, 0);
+    this.initPackSize(mockMonthlyHomeEssentialsProduct2, 0);
     this.runOverArray();
   }
 
-  constructor(private fb: FormBuilder) {
-    if (this.inputData && this.inputData.packId) {
+  constructor(
+    private fb: FormBuilder,
+    public dialog: MatDialog
+  ) {
+    if (this.inputData) {
       this.initialisePage(this.inputData);
       this.packLoaded = true;
     }
@@ -88,7 +83,6 @@ export class CustomisePackComponent implements OnChanges {
       itemsFormArray.push(
         fb.group({
           isChecked: (item.isChecked),
-          isBrandless: (item.isBrandless),
           name: (item.name),
           pricePerItem: (pricePerItem),
           totalPricePerItem: (totalPricePerItem),
@@ -165,10 +159,6 @@ export class CustomisePackComponent implements OnChanges {
     this.runOverArray();
   }
 
-  toggleBrandless(e: any, index: any) {
-    this.runOverArray();
-  }
-
   changePackSize(e: any) {
     const packSize = e;
     const itemsFormArray = this.form.controls.items as FormArray;
@@ -193,10 +183,24 @@ export class CustomisePackComponent implements OnChanges {
     return index;
   }
 
-  readonly languages = [{
-    viewValue: 'en'
-  }, {
-    viewValue: 'ru'
-  }];
+  openViewEditPackDialog(pack: any): void {
+    let dialogRef = this.dialog.open(ViewEditPackComponent, {
+      hasBackdrop: true,
+      disableClose: false,
+      height: '100vh',
+      minWidth: '90%',
+      position: {
+        right: '0px',
+        bottom: '0px',
+      },
+      data: {
+        pack: pack
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
 }

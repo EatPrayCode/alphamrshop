@@ -18,7 +18,7 @@
                     <a [routerLink]="['organiser']">Organiser</a>
                 </li>
                 <li class="navLinks__item ">
-                    <a [routerLink]="['organiser']" class="activeHeader">Grow</a>
+                    <a [routerLink]="['investment-packs']" class="activeHeader">Grow</a>
                 </li>
                 <li class="navLinks__item ">
                     <a [routerLink]="['organiser']">Pay</a>
@@ -32,7 +32,9 @@
     </nav>
     <main class="">
         <div id="mainDiv" class="index-module--container--20-MV">
-            <router-outlet></router-outlet>
+            <div class="main-container">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </main>
 </div>

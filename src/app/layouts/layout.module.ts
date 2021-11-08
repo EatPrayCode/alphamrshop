@@ -1,5 +1,5 @@
 import { AuthModule } from './../core/auth/auth.module';
-import { CustomisePackModule } from './customise-pack/customise-pack.module';
+import { CustomisePackModule } from '../pages/checkout/components/customise-pack/customise-pack.module';
 import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';

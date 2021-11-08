@@ -19,6 +19,7 @@ export const routes: Routes = [
         // component: KitchensinkComponent,
         children: [
             { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+            { path: 'investment-packs', loadChildren: () => import('./pages/investment-packs/investment-packs.module').then(m => m.InvestmentPacksModule) },
             { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
             { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) }
 

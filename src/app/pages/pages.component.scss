@@ -212,3 +212,13 @@ strong {
 img {
     border-style: none;
 }
+
+.main-container {
+    padding-top: 80px;
+}
+
+@media only screen and (max-width:600px) {
+    .main-container {
+        padding-top: 2px;
+    }
+}
