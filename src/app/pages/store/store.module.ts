@@ -1,22 +1,25 @@
-import { PacksComponent } from './components/packs/packs.component';
+import { RouterModule } from '@angular/router';
+import { PacksComponent } from '../packs/packs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { PacksModule } from '../packs/packs.module';
+import { StoreComponent } from './store/store.component';
 
 export const routes = [
-  { path: '', component: PacksComponent, pathMatch: 'full' },
-  { path: ':id', component: PacksComponent }
+  { path: '', component: StoreComponent, pathMatch: 'full' },
+  { path: ':id', component: StoreComponent }
 ];
 
 @NgModule({
   declarations: [
-    PacksComponent
+    StoreComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
-  ]
+    SharedModule,
+    PacksModule
+  ],
 })
 export class StoreModule { }

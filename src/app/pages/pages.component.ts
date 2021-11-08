@@ -10,10 +10,6 @@ export class PagesComponent implements OnInit {
     viewName: 'Home',
     icon: '',
     route: 'home'
-  }, {
-    viewName: 'Organiser',
-    icon: '',
-    route: 'organiser'
   },
   {
     viewName: 'Grow',

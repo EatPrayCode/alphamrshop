@@ -20,7 +20,6 @@ export const routes: Routes = [
         children: [
             { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
             { path: 'investment-packs', loadChildren: () => import('./pages/investment-packs/investment-packs.module').then(m => m.InvestmentPacksModule) },
-            { path: 'organiser', loadChildren: () => import('./pages/organiser/organiser.module').then(m => m.OrganiserModule) },
             { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
             { path: 'store', loadChildren: () => import('./pages/store/store.module').then(m => m.StoreModule) },
         ]

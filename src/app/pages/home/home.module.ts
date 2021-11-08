@@ -1,8 +1,9 @@
+import { OrganiserModule } from './organiser/organiser.module';
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
-import { HomeComponent } from './home.component';
 
 export const routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' }
@@ -15,7 +16,8 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    OrganiserModule
   ]
 })
 export class HomeModule { }
