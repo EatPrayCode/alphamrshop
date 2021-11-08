@@ -1,70 +1,50 @@
 <div class="container-fluid main-container">
-    <h2>Investment Packs</h2>
-    <div class="row">
-        <div class="col-3 left-container">
-            <span class="badge rounded-pill bg-primary" style="visibility:hidden;">
-                
-                <span class="badge bg-danger"></span>
-            </span>
-            <div class="d-flex flex-column mb-3">
-                <div class="p-2 bg-info">Home</div>
-                <div class="p-2 bg-warning">Office</div>
-                <div class="p-2 bg-success">Pharmacy</div>
-                <div class="p-2 bg-info" *ngFor="let task of rightList">Pharmacy</div>
-            </div>
-        </div>
-        <div class="col-9 right-container">
-            <span class="badge rounded-pill bg-primary">
-                All
-                <span class="badge bg-danger">4</span>
-            </span>
-            <span class="badge rounded-pill bg-success">
-                Done
-                <span class="badge bg-danger">4</span>
-            </span>
-            <span class="badge rounded-pill bg-warning">
-                Pending
-                <span class="badge bg-danger">4</span>
-            </span>
+    <h2>Investments</h2>
+    <br>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#home">SIP's</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu1">Mutual Funds</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Chits</a>
+        </li>
 
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-success">
-                    Success item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-secondary">
-                    Secondary item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-info">
-                    Info item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-warning">
-                    Warning item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-danger">
-                    Danger item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    Primary item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-dark">
-                    Dark item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li class="list-group-item list-group-item-light">
-                    Light item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-                <li *ngFor="let task of rightList" class="list-group-item list-group-item-success">
-                    Success item
-                    <span class="badge bg-primary rounded-pill">50</span>
-                </li>
-            </ul>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="home" class="container tab-pane active"><br>
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="menu1" class="container tab-pane fade"><br>
+            <h3>Menu 1</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div id="menu2" class="container tab-pane fade"><br>
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
         </div>
     </div>
+</div>
+
+<div class="container-fluid">
+    <h2>Home</h2>
+    <span class="badge rounded-pill bg-primary">Primary</span>
+    <span class="badge rounded-pill bg-secondary">Secondary</span>
+    <span class="badge rounded-pill bg-success">Success</span>
+    <span class="badge rounded-pill bg-danger">Danger</span>
+    <span class="badge rounded-pill bg-warning">Warning</span>
+    <span class="badge rounded-pill bg-info">Info</span>
+    <span class="badge rounded-pill bg-light">Light</span>
+    <span class="badge rounded-pill bg-dark">Dark</span>
+
+    <button type="button" class="btn btn-primary">
+        Messages <span class="badge bg-danger">4</span>
+    </button>
+
 </div>
