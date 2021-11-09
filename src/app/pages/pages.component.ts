@@ -23,11 +23,6 @@ export class PagesComponent implements OnInit {
     viewName: 'Store',
     icon: '',
     route: 'store'
-  },
-  {
-    viewName: 'Checkout',
-    icon: '',
-    route: 'checkout'
   }];
 
   currentNavlink:any = this.navlinks[0];

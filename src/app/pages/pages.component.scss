@@ -15,7 +15,7 @@ main {
     font-family: UniNeue, Arial, -apple-system, Roboto, sans-serif, serif;
     margin: 0 auto;
     padding: 0;
-    background: orange !important;
+    background: antiquewhite !important;
 }
 
 .navHeaderStyles {
@@ -131,7 +131,7 @@ main {
     font-size: 16px;
     letter-spacing: .02em;
     line-height: 40px;
-    margin: 0px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     text-align: center;
     text-decoration: none;
     opacity: .8;
@@ -214,5 +214,9 @@ img {
 }
 
 .settings {
+    margin: 12px 10px 5px 15px;
+}
+
+.cart {
     margin: 12px 10px 5px 15px;
 }
