@@ -1,0 +1,73 @@
+<table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort class="mat-elevation-z8">
+
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(element) : null"
+                      [checked]="selection.isSelected(element)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+  
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="weight">
+    <th mat-header-cell *matHeaderCellDef> Weight </th>
+    <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Symbol </th>
+    <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+  </ng-container>
+
+
+  <!-- Document Column -->
+  <ng-container matColumnDef="document">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Document </th>
+    <td mat-cell *matCellDef="let search; let i = index">
+        <button mat-button (click)="handleClick(search)">Show
+            Log</button>
+    </td>
+</ng-container>
+
+
+      <!-- more containers -->
+<!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+<ng-container matColumnDef="expandedDetail">
+  <td mat-cell *matCellDef="let search" [attr.colspan]="columnsToDisplay.length">
+      <div class="example-element-detail"
+          [@detailExpand]="search === expandedElement ? 'expanded' : 'collapsed'">
+          <div class="example-element-description">
+            {{search|json}}
+          </div>
+      </div>
+  </td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+<tr mat-row *matRowDef="let search; columns: columnsToDisplay;" class="example-element-row"
+  [class.example-expanded-row]="expandedElement === search"
+  >
+</tr>
+<tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+</table>

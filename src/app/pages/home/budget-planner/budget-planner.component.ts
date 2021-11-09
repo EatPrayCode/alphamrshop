@@ -5,9 +5,9 @@ import {SelectionModel} from '@angular/cdk/collections';
  * @title Table with expandable rows
  */
  @Component({
-  selector: 'app-blank',
-  templateUrl: './blank.component.html',
-  styleUrls: ['./blank.component.scss'],
+  selector: 'app-budget-planner',
+  templateUrl: './budget-planner.component.html',
+  styleUrls: ['./budget-planner.component.scss'],
   animations: [
     trigger('detailExpand', [
       state('collapsed', style({height: '0px', minHeight: '0'})),
@@ -16,7 +16,7 @@ import {SelectionModel} from '@angular/cdk/collections';
     ]),
   ],
 })
-export class BlankComponent {
+export class BudgetPlannerComponent {
 
   dataSource:any = ELEMENT_DATA;
   columnsToDisplay = ['select','document','name', 'weight', 'symbol', 'position'];
