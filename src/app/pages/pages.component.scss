@@ -84,7 +84,7 @@ main {
     flex: 1 1;
     font-weight: 800;
     font-size: 28px;
-    line-height: 50px;
+    line-height: 52px;
     display: flex;
     align-items: center;
     letter-spacing: .02em;
@@ -120,7 +120,7 @@ main {
     .navHeaderStyles .navLinks__item {
         margin-right: 0;
         width: 100%;
-        padding: 0 4px;
+        padding: 0 0px;
     }
 }
 
@@ -131,7 +131,7 @@ main {
     font-size: 16px;
     letter-spacing: .02em;
     line-height: 40px;
-    padding: 8px 0;
+    margin: 0px 0px 0px 0px;
     text-align: center;
     text-decoration: none;
     opacity: .8;
@@ -211,4 +211,8 @@ strong {
 
 img {
     border-style: none;
+}
+
+.settings {
+    margin: 12px 10px 5px 15px;
 }
