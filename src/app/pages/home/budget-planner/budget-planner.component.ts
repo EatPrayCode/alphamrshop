@@ -18,8 +18,10 @@ import {SelectionModel} from '@angular/cdk/collections';
 })
 export class BudgetPlannerComponent {
 
+  leftList: any = [{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {},{}, {}, {}, {}];
+
   dataSource:any = ELEMENT_DATA;
-  columnsToDisplay = ['select','document','name', 'weight', 'symbol', 'position'];
+  columnsToDisplay = ['select','document','name', 'weight', 'position'];
   expandedElement : any = null;
 
   // displayedColumns: string[] = ['select', 'position', 'name', 'weight', 'symbol'];

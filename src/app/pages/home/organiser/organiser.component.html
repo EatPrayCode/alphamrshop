@@ -9,7 +9,7 @@
                 <div class="p-2 bg-info">Home</div>
                 <div class="p-2 bg-warning">Office</div>
                 <div class="p-2 bg-success">Pharmacy</div>
-                <div class="p-2 bg-info" *ngFor="let task of rightList">Pharmacy</div>
+                <div class="p-2 bg-info" *ngFor="let task of leftList">Pharmacy</div>
             </div>
         </div>
         <div class="col-9 right-container">
@@ -59,7 +59,7 @@
                     Light item
                     <span class="badge bg-primary rounded-pill">50</span>
                 </li>
-                <li *ngFor="let task of rightList" class="list-group-item list-group-item-success">
+                <li *ngFor="let task of leftList" class="list-group-item list-group-item-success">
                     Success item
                     <span class="badge bg-primary rounded-pill">50</span>
                 </li>
