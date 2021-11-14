@@ -1,18 +1,10 @@
 main {
     display: block;
-    margin-top: 0px;
+    margin-top: 55px;
 }
 
-@media only screen and (max-width:600px) {
-    main {
-        margin-top: 50px;
-        padding-bottom: 0px;
-    }
-}
-
-.index-module--container--20-MV {
+.main-outlet-wrapper {
     box-sizing: border-box;
-    font-family: UniNeue, Arial, -apple-system, Roboto, sans-serif, serif;
     margin: 0 auto;
     padding: 0;
     background: antiquewhite !important;
@@ -23,7 +15,6 @@ main {
     box-shadow: 0 -2px 30px rgba(0, 0, 0, .2);
     box-sizing: border-box;
     color: #fff;
-    font-family: UniNeue, -apple-system, Roboto, sans-serif, serif;
     display: flex;
     padding: 0 40px;
     margin: 0;
@@ -144,7 +135,6 @@ main {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    // background-color: transparent;
 }
 
 @media only screen and (max-width:600px) {
