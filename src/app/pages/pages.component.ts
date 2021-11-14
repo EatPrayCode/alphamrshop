@@ -1,3 +1,4 @@
+import { SigninComponent } from './../core/auth/components/signin/signin.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { ChooseAppSettingsModalComponent } from '../core/auth/components/choose-app-settings-modal/choose-app-settings-modal.component';
@@ -39,6 +40,26 @@ export class PagesComponent implements OnInit {
 
   openSettingsDialog(): void {
     let dialogRef = this.dialog.open(ChooseAppSettingsModalComponent, {
+      hasBackdrop: true,
+      disableClose: false,
+      height: '100vh',
+      minWidth: '90%',
+      position: {
+        right: '0px',
+        bottom: '0px',
+      },
+      data: {
+        pack: packsDataSampleDoctor[0]
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  openLoginDialog(): void {
+    let dialogRef = this.dialog.open(SigninComponent, {
       hasBackdrop: true,
       disableClose: false,
       height: '100vh',
