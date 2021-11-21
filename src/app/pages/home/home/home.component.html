@@ -1,23 +1,26 @@
 <div class="container-fluid">
-    <h2 class="page-title">Home</h2>
+    <h2 class="page-title">Welcome</h2>
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-bs-toggle="tab" href="#home">My Orders</a>
+            <a class="nav-link active" data-bs-toggle="tab" href="#home-landing">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu1">Budget</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#menu1">Organiser</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Organiser</a>
+            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Budget</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#menu3">My Lists</a>
         </li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
-        <div id="home" class="tab-pane active">
-            <app-organiser></app-organiser>
+        <div id="home-landing" class="tab-pane active">
+            Home
         </div>
         <div id="menu1" class="tab-pane fade">
             <app-budget-planner></app-budget-planner>
@@ -25,9 +28,11 @@
         <div id="menu2" class="tab-pane fade">
             <app-organiser></app-organiser>
         </div>
+        <div id="menu3" class="tab-pane fade">
+            <app-organiser></app-organiser>
+        </div>
     </div>
 </div>
-
 
 <div class="container-fluid">
     <h2>Home</h2>

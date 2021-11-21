@@ -1,16 +1,16 @@
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InvestmentPacksComponent } from './investment-packs/investment-packs.component';
-import { PacksModule } from '../packs/packs.module';
+import { PacksModule } from '../../features/packs/packs.module';
+import { InvestmentsComponent } from './investments/investments.component';
 
 export const routes = [
-  { path: '', component: InvestmentPacksComponent, pathMatch: 'full' }
+  { path: '', component: InvestmentsComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
-    InvestmentPacksComponent,
+    InvestmentsComponent,
   ],
   imports: [
     CommonModule,
@@ -18,4 +18,4 @@ export const routes = [
     PacksModule,
   ]
 })
-export class InvestmentPacksModule { }
+export class InvestmentsModule { }

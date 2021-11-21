@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../../shared/shared.module';
-import { OrganiserModule } from './organiser/organiser.module';
-import { BudgetPlannerModule } from './budget-planner/budget-planner.module';
-import { HomeComponent } from './home/home.component';
+import { BudgetPlannerModule } from '../../features/home/budget-planner/budget-planner.module';
+import { HomeComponent } from 'src/app/pages/home/home/home.component';
+import { OrganiserModule } from 'src/app/features/home/organiser/organiser.module';
 
 export const routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' }

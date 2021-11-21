@@ -1,5 +1,6 @@
+import { PagesComponent } from './pages/pages.component';
 import { AuthModule } from './../core/auth/auth.module';
-import { CustomisePackModule } from '../pages/checkout/components/customise-pack/customise-pack.module';
+import { CustomisePackModule } from '../features/customise-pack/customise-pack.module';
 import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -10,7 +11,8 @@ import { BlankComponent } from './blank/blank.component';
 
 @NgModule({
   declarations: [
-    BlankComponent
+    BlankComponent,
+    PagesComponent
   ],
   imports: [
     CommonModule,

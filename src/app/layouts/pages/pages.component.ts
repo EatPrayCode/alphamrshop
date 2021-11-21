@@ -1,8 +1,9 @@
-import { SigninComponent } from './../core/auth/components/signin/signin.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
-import { ChooseAppSettingsModalComponent } from '../core/auth/components/choose-app-settings-modal/choose-app-settings-modal.component';
-import { packsDataSampleDoctor } from '../mock-data/constants';
+import { ChooseAppSettingsModalComponent } from 'src/app/core/auth/components/choose-app-settings-modal/choose-app-settings-modal.component';
+import { SigninComponent } from 'src/app/core/auth/components/signin/signin.component';
+import { packsDataSampleDoctor } from 'src/app/mock-data/constants';
+
 @Component({
   selector: 'app-pages',
   templateUrl: './pages.component.html',
@@ -16,9 +17,14 @@ export class PagesComponent implements OnInit {
     route: 'home'
   },
   {
-    viewName: 'Grow',
+    viewName: 'Finance',
     icon: '',
-    route: 'investment-packs'
+    route: 'investments'
+  },
+  {
+    viewName: 'Invest',
+    icon: '',
+    route: 'investments'
   },
   {
     viewName: 'Store',
