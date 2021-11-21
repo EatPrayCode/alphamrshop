@@ -1,11 +1,8 @@
-import { RouterModule } from '@angular/router';
-import { PacksComponent } from '../packs/packs.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { PacksModule } from '../packs/packs.module';
 import { StoreComponent } from './store/store.component';
-
 
 @NgModule({
   declarations: [
@@ -14,7 +11,13 @@ import { StoreComponent } from './store/store.component';
   imports: [
     CommonModule,
     SharedModule,
+    PacksModule
+  ],
+  exports: [
+    CommonModule,
+    SharedModule,
     PacksModule,
+    StoreComponent
   ],
 })
 export class StoreModule { }

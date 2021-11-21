@@ -19,7 +19,7 @@ export class PagesComponent implements OnInit {
   {
     viewName: 'Finance',
     icon: '',
-    route: 'investments'
+    route: 'finances'
   },
   {
     viewName: 'Invest',

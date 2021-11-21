@@ -19,6 +19,7 @@ export const routes: Routes = [
         children: [
             { path: 'home', loadChildren: () => import('./containers/home/home-container.module').then(m => m.HomeContainerModule) },
             { path: 'investments', loadChildren: () => import('./containers/investments/investments-container.module').then(m => m.InvestmentsContainerModule) },
+            { path: 'finances', loadChildren: () => import('./containers/finances/finances-container.module').then(m => m.FinancesContainerModule) },
             { path: 'checkout', loadChildren: () => import('./containers/checkout/checkout-container.module').then(m => m.CheckoutContainerModule) },
             { path: 'store', loadChildren: () => import('./containers/store/store-container.module').then(m => m.StoreContainerModule) },
         ]
