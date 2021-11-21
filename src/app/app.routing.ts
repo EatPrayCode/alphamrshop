@@ -9,7 +9,7 @@ export const routes: Routes = [
         component: BlankComponent,
         // component: KitchensinkComponent,
         children: [
-            { path: '', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
+            { path: '', loadChildren: () => import('./containers/landing/landing-container.module').then(m => m.LandingContainerModule) },
         ]
     },
     {
@@ -17,10 +17,10 @@ export const routes: Routes = [
         component: PagesComponent,
         // component: KitchensinkComponent,
         children: [
-            { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
-            { path: 'investments', loadChildren: () => import('./pages/investments/investments.module').then(m => m.InvestmentsModule) },
-            { path: 'checkout', loadChildren: () => import('./pages/checkout/checkout.module').then(m => m.CheckoutModule) },
-            { path: 'store', loadChildren: () => import('./pages/store/store.module').then(m => m.StoreModule) },
+            { path: 'home', loadChildren: () => import('./containers/home/home-container.module').then(m => m.HomeContainerModule) },
+            { path: 'investments', loadChildren: () => import('./containers/investments/investments-container.module').then(m => m.InvestmentsContainerModule) },
+            { path: 'checkout', loadChildren: () => import('./containers/checkout/checkout-container.module').then(m => m.CheckoutContainerModule) },
+            { path: 'store', loadChildren: () => import('./containers/store/store-container.module').then(m => m.StoreContainerModule) },
         ]
     },
 ];

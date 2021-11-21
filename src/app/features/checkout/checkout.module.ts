@@ -4,11 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { CustomisePackModule } from '../../features/customise-pack/customise-pack.module';
-
-export const routes = [
-  { path: '', component: CheckoutComponent, pathMatch: 'full' }
-];
+import { CustomisePackModule } from '../customise-pack/customise-pack.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +12,6 @@ export const routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
@@ -24,6 +19,7 @@ export const routes = [
   ],
   exports: [
     CheckoutComponent,
+    CustomisePackModule
   ],
 })
 export class CheckoutModule { }

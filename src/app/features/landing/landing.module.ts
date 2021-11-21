@@ -1,17 +1,18 @@
 import { LandingComponent } from './landing/landing.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
- 
-export const routes = [
-  { path: '', component: LandingComponent, pathMatch: 'full'  }
-];
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-  declarations: [LandingComponent],
+  declarations: [
+    LandingComponent
+  ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    SharedModule
+  ],
+  exports: [
+    LandingComponent
   ]
 })
 export class LandingModule { }
